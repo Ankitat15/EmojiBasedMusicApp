@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>█▓▒░ Y O U R ❤️ B E L O N G S T O U S ░▒▓█ 🎶
+    </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4, #fbc2eb);
+            color: #333;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f7f7f7;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .emoji-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .emoji-game {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .emoji {
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .emoji:hover {
+            transform: scale(1.3);
+        }
+
+        .emoji-instructions {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .play-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        █▓▒░ Y O U R ❤️ B E L O N G S T O U S ░▒▓█ 🎶
+
+    </header>
+
+    <div class="features-container">
+        <div class="feature">
+            <h3>🎨 Emoji-Themed Achievements</h3>
+            <p>Earn badges and achievements based on your listening habits, like "🎵 Mood Matcher" for perfectly matching your mood to a playlist!</p>
+        </div>
+
+        <div class="feature">
+            <h3>🎮 Emoji Game Integration</h3>
+            <p>Play fun emoji-based games to unlock exclusive playlists and features. Match emojis to genres or guess songs based on emoji hints!</p>
+
+            <div class="emoji-container">
+                <p class="emoji-instructions">Guess the music genre represented by these emojis:</p>
+                <div class="emoji-game">
+                    <span class="emoji" onclick="checkEmojiGenre('🎸')">🎸</span>
+                    <span class="emoji" onclick="checkEmojiGenre('🎻')">🎻</span>
+                    <span class="emoji" onclick="checkEmojiGenre('🎤')">🎤</span>
+                    <span class="emoji" onclick="checkEmojiGenre('🎷')">🎷</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>🔀 Music Recommendations by Emoji Combination</h3>
+            <p>Select a combination of emojis, and we'll create a personalized playlist to match your unique vibe.</p>
+            <div class="emoji-container">
+                <p class="emoji-instructions">Choose your vibe:</p>
+                <div class="emoji-game">
+                    <span class="emoji" onclick="generatePlaylist('😌')">😌</span>
+                    <span class="emoji" onclick="generatePlaylist('🎉')">🎉</span>
+                    <span class="emoji" onclick="generatePlaylist('💪')">💪</span>
+                    <span class="emoji" onclick="generatePlaylist('💖')">💖</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>🌟 Mood-Based Playlists</h3>
+            <p>Get personalized playlists based on your mood. Simply select your mood, and we'll do the rest!</p>
+        </div>
+
+        <div class="feature">
+            <h3>🤝 Share Your Emoji Vibes</h3>
+            <p>Share your favorite playlists and emojis with friends. Connect and enjoy music together!</p>
+        </div>
+    </div>
+
+    <script>
+        // Achievements tracking
+        const achievements = {
+            moodMatcher: false,
+        };
+
+        function unlockAchievement(achievement) {
+            achievements[achievement] = true;
+            localStorage.setItem("achievements", JSON.stringify(achievements));
+            alert(`🎉 Achievement unlocked: ${achievement}!`);
+        }
+
+        // Emoji Game Integration
+        const emojiGameGenres = {
+            "🎸": "Rock",
+            "🎻": "Classical",
+            "🎤": "Pop",
+            "🎷": "Jazz",
+        };
+
+        function checkEmojiGenre(emoji) {
+            const genre = emojiGameGenres[emoji];
+            if (genre) {
+                alert(`Correct! ${emoji} represents ${genre}!`);
+                unlockAchievement("moodMatcher");
+            } else {
+                alert("Try again!");
+            }
+        }
+
+        // Music Recommendations by Emoji Combination
+        const emojiPlaylists = {
+            "😌": "Chill Vibes 🎶",
+            "🎉": "Party Time 🎉",
+            "💪": "Workout Beats 💪",
+            "💖": "Love Songs 💖",
+        };
+
+        function generatePlaylist(emoji) {
+            const playlist = emojiPlaylists[emoji];
+            if (playlist) {
+                alert(`Playlist created: ${playlist}`);
+            } else {
+                alert("No playlist found for this emoji!");
+            }
+        }
+    </script>
+</body>
+</html>

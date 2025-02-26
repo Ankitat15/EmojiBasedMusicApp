@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎧 Emoji Music App 🎶</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Emoji Music App 🎶</h1>
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="🔍 Search for songs...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="song-list">
+            <h2>🎵 Songs</h2>
+            <ul id="songList"></ul>
+        </div>
+        <div class="playlist">
+            <h2>📜 Your Playlist</h2>
+            <ul id="playlist"></ul>
+        </div>
+        <div class="player-controls">
+            <h2>🎶 Now Playing</h2>
+            <div id="nowPlaying"></div>
+            <div class="controls">
+                <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+                <button id="stopBtn"><i class="fas fa-stop"></i></button>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+                <span id="volumeIcon">🔊</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
