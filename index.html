@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: url('https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/emoji-bg.png?raw=true') no-repeat center center fixed;
+            background: url('Images/emoji-bg.png') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             overflow-x: hidden;
@@ -41,51 +41,36 @@
             text-shadow: 0px 0px 8px #fff;
         }
 
-       .image-container {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Beautiful gradient */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-}
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            /*background: linear-gradient(135deg, #8e44ad, #3498db);*/
+            background: transparent;
+        }
 
-.styled-image {
-    width: 80%;
-    max-width: 500px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
 
-.styled-image:hover {
-    transform: scale(1.05);
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
 
-.image-caption {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-top: 10px;
-    font-weight: bold;
-}
+        .hero button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.explore-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.explore-btn:hover {
-    background-color: #ff4b47;
-}
-
+        .hero button:hover {
+            background: #c0392b;
+        }
 
         .features {
             display: flex;
@@ -149,7 +134,7 @@
 </head>
 <body>
     <header>
-        <h1><img src="https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/happiness.png?raw=true" style="height:50px;width:50px;">Emojitunes<img src="https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/happiness.png?raw=true" style="height:50px;width:50px;"></h1>
+        <h1><img src="Images/happiness.png" style="height:50px;width:50px;">Emojitunes<img src="Images/happiness.png" style="height:50px;width:50px;"></h1>
         <nav>
             <a href="#">Home</a>
             <a href="features.html">Features</a>
@@ -158,29 +143,25 @@
         </nav>
     </header>
 
-    <div class="image-container">
-    <img src="https://raw.githubusercontent.com/ankitat15/EmojiBasedMusicApp/main/images/music.png" 
-         alt="Mood Based Playlists" class="styled-image"
-         onerror="this.onerror=null; this.src='https://via.placeholder.com/500x300?text=Music+App'">
-    <p class="image-caption">🎵 Discover Your Mood-Based Playlist 🎶</p>
-    <button class="explore-btn">Explore Now</button>
-</div>
-
-
+    <div class="hero">
+        <h2 style=" background: rgba(0, 0, 0, 0.7);;font-size: 50px;">Discover Music by Emojis!</h2>
+        <p style=" background: rgba(0, 0, 0, 0.7);font-size: 40px;">Let your emotions pick the perfect soundtrack for your mood.</p>
+        <button>Get Started</button>
+    </div>
 
     <div id="features" class="features">
-        <div class="feature-card">"
-            <img src="https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/music.png?raw=true" alt="Mood Based Playlists">
+        <div class="feature-card">
+            <img src="Images/music.png" alt="Mood Based Playlists">
             <h3>Mood Based Playlists</h3>
             <p>Explore playlists curated by your chosen emoji mood.</p>
         </div>
         <div class="feature-card">
-            <img src="https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/emojis.png?raw=true" alt="Seamless Integration">
+            <img src="Images/emojis.png" alt="Seamless Integration">
             <h3>Seamless Integration</h3>
             <p>Connect with your favorite music streaming platforms.</p>
         </div>
         <div class="feature-card">
-            <img src="https://github.com/Ankitat15/EmojiBasedMusicApp/blob/main/PROJECT_FEB/Images/happy-face.png?raw=true" alt="Emoji DJ">
+            <img src="Images/happy-face.png" alt="Emoji DJ">
             <h3>Emoji DJ</h3>
             <p>Let emojis guide the beats for your mood.</p>
         </div>
