@@ -41,36 +41,31 @@
             text-shadow: 0px 0px 8px #fff;
         }
 
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            /*background: linear-gradient(135deg, #8e44ad, #3498db);*/
-            background: transparent;
-        }
+        .image-container {
+    text-align: center; 
+    margin: 20px auto;
+    padding: 10px;
+}
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+.styled-image {
+    width: 80%; /* Makes image responsive */
+    max-width: 500px; /* Prevents it from being too large */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    transition: transform 0.3s ease-in-out;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
+.styled-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
 
-        .hero button {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.image-caption {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-        .hero button:hover {
-            background: #c0392b;
-        }
 
         .features {
             display: flex;
@@ -143,11 +138,12 @@
         </nav>
     </header>
 
-    <div class="hero">
-        <h2 style=" background: rgba(0, 0, 0, 0.7);;font-size: 50px;">Discover Music by Emojis!</h2>
-        <p style=" background: rgba(0, 0, 0, 0.7);font-size: 40px;">Let your emotions pick the perfect soundtrack for your mood.</p>
-        <button>Get Started</button>
-    </div>
+    <div class="image-container">
+    <img src="https://raw.githubusercontent.com/ankitat15/EmojiBasedMusicApp/main/images/music.png" 
+         alt="Mood Based Playlists" class="styled-image">
+    <p class="image-caption">🎵 Discover Your Mood-Based Playlist 🎶</p>
+</div>
+
 
     <div id="features" class="features">
         <div class="feature-card">"
